@@ -8,7 +8,7 @@ pnpm i
 ## Running
 tsc
 
-pnpm dist/app
+node dist/app
 
 ### Arguments
 
