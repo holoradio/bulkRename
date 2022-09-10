@@ -32,7 +32,14 @@ async function rename() {
         newFileName = newFileName.replace(/[)]/g, replaceWith);
         newFileName = newFileName.replace(/[[]/g, replaceWith);
         newFileName = newFileName.replace("]", replaceWith);
+        newFileName = newFileName.replace("@", replaceWith);
         newFileName = newFileName.replace("＊", replaceWith);
+        newFileName = newFileName.replace("【", replaceWith);
+        newFileName = newFileName.replace("】", replaceWith);
+        newFileName = newFileName.replace(/[\/]/g, replaceWith);
+        newFileName = newFileName.replace(/(\/)/g, replaceWith);
+        newFileName = newFileName.replace(/(_\/)/g, replaceWith);
+        newFileName = newFileName.replace(/[＂]/g, replaceWith);
         newFileName = newFileName.replace(/(__)/g, "_");
       }
 
