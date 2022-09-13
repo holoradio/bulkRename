@@ -29,6 +29,7 @@ async function rename() {
         newFileName = file.replace(new RegExp(regex, "g"), replaceWith);
       } else if (removeB) {
         newFileName = file.replace(/[(]/g, replaceWith);
+        newFileName = newFileName.replace(/(_#)+[A-z]+/g, replaceWith);
         newFileName = newFileName.replace(/[)]/g, replaceWith);
         newFileName = newFileName.replace(/[[]/g, replaceWith);
         newFileName = newFileName.replace("]", replaceWith);
