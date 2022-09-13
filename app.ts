@@ -30,6 +30,7 @@ async function rename() {
       } else if (removeB) {
         newFileName = file.replace(/[(]/g, replaceWith);
         newFileName = newFileName.replace(/(_#)+[A-z]+/g, replaceWith);
+        newFileName = newFileName.replace(/(_#)/g, replaceWith);
         newFileName = newFileName.replace(/[)]/g, replaceWith);
         newFileName = newFileName.replace(/[[]/g, replaceWith);
         newFileName = newFileName.replace("]", replaceWith);
